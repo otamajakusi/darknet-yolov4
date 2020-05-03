@@ -14,7 +14,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-make
+make GPU=1 CUDNN=1
 
 # tar -C directory --strip-components 1 has a problem for darknet??
 # `'Couldn't open file:`
