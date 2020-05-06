@@ -14,7 +14,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-make GPU=1 CUDNN=1
+make GPU=1 CUDNN=1 CUDNN_HALF=1 OPENCV=1
 
 # tar -C directory --strip-components 1 has a problem for darknet??
 # `'Couldn't open file:`
@@ -43,4 +43,4 @@ fi
 rm -r backup
 ln -s "/content/drive/My Drive/ml/yolov4-backup" backup
 
-./darknet detector train cfg/tiles.data cfg/yolov4-tile.cfg ${weight}
+./darknet detector train cfg/tiles.data cfg/yolov4-tile.cfg ${weight} -dont_show
