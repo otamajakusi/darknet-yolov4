@@ -33,8 +33,8 @@ else
     tar zcf "/content/drive/My Drive/ml/yolov4-backup/anno.tgz" {train,valid}.txt 2018-06-23/*.txt
 fi
 
-if [ -f "/content/drive/My Drive/ml/yolov4-backup/yolov4-tile.backup" ]; then
-    weight="backup/yolov4-tile.backup"
+if [ -f "/content/drive/My Drive/ml/yolov4-backup/yolov4-tile_last.weights" ]; then
+    weight="backup/yolov4-tile_last.weights"
 else
     weight="yolov4.conv.137"
     wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137
